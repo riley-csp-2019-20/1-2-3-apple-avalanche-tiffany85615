@@ -32,7 +32,7 @@ wn.bgpic("tree.gif")
 #create apple turtle
 #apple = trtl.Turtle()
 #apple.up()
-
+wn.tracer(False)
 # given a turtle, set that turtle to be shaped by the image file
 
 
@@ -56,6 +56,7 @@ def draw_apple(active_apple, letter):
 
 
 def apple_fall(letter):
+  wn.tracer(True)
   index = current_letters.index(letter)
   current_letters.pop(index)
 
@@ -66,7 +67,7 @@ def apple_fall(letter):
   active_apple.ht()
   reset_apple(active_apple)
   apple_list.append(active_apple)
-
+  wn.tracer(False)
 
 def draw_letter(active_apple, letter):
   active_apple.color("white")
@@ -121,24 +122,31 @@ def check_letter_I():
 def check_letter_J():
   if ("J" in current_letters):
     apple_fall("J")
+
 def check_letter_K():
   if ("K" in current_letters):
     apple_fall("K")
+
 def check_letter_L():
   if ("L" in current_letters):
     apple_fall("L")
+
 def check_letter_M():
   if ("M" in current_letters):
     apple_fall("M")
+
 def check_letter_N():
   if ("N" in current_letters):
     apple_fall("N")
+
 def check_letter_O():
   if ("O" in current_letters):
     apple_fall("O")
+
 def check_letter_P():
   if ("P" in current_letters):
     apple_fall("P")
+
 def check_letter_Q():
   if ("Q" in current_letters):
     apple_fall("Q")
